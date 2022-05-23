@@ -1,0 +1,8 @@
+.guitar {
+    display:flex;
+    flex-direction: column;
+    background-color: #be975b;
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
