@@ -4,27 +4,22 @@ import React from 'react';
 import {
     STRINGS } from '../../global/constants.js'
 
-import { String } from './String.js'
+import String  from './String.js'
 
 import './Guitar.css';
 
-class Guitar extends React.Component {
-    render() {
-        const strings = _.map(STRINGS, (string, index) => {
-            return (
-                <String
-                    index = {index}
+const Guitar = ( {fretboard, selectedNotes, onClick} ) => {
+    return (
+        <div className = "guitar">
+            {fretboard.map((string) => (
+                <String 
                     string = {string}
+                    selectedNotes = {selectedNotes}
+                    onClick = {onClick}
                 />
-            );
-        });
-
-        return (
-            <div className = "guitar">
-                {strings}
-            </div>
-        )
-    }
+            ))}
+        </div>
+    )
 }
 
-export { Guitar }
+export default Guitar

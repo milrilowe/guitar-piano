@@ -1,38 +1,31 @@
 import React from 'react';
-import _ from 'lodash';
 
 import './Key.css';
-import { NOTE_TO_KEY } from '../../global/constants.js'
+import Note from '../Note.js';
 
-class Key extends React.Component {
-    noteIsSharp = (note) => {
-        return note.length > 2;
+
+const Key = ( { thisKey, selectedNotes, onClick } ) => {
+    //key is special prop not forwarded by react
+    const key = thisKey;
+    let keyClassName = "key";
+
+    const noteIsSharp = () => {
+        return key.note.length > 2;
     }
 
-    keyIsPressed = (note, pressedKeys) => {
-        return _.includes(pressedKeys, NOTE_TO_KEY[note])
+    if (noteIsSharp()) {
+        keyClassName += " sharp"
     }
 
-    render() {
-        let keyClassName = "key";
-
-        const noteIsSharp = this.noteIsSharp(this.props.note);
-        const keyIsPressed = this.keyIsPressed(this.props.note, this. props.pressedKeys);
-
-        if (noteIsSharp) {
-            keyClassName += " sharp"
-        }
-
-        if(keyIsPressed) {
-            keyClassName += " pressed";
-        }
-
-        let key;
-        key = (
-            <div className = {keyClassName}></div>
-        )
-        return key; 
-    } 
+    return (
+        <div className = {keyClassName} onClick = {() => onClick(key.note)}>
+            {<Note
+                type = {keyClassName}
+                note = {key.note}
+                selectedNotes = {selectedNotes}
+            />}
+        </div>
+    )
 }
 
-export { Key };
+export default Key

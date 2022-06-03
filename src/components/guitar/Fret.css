@@ -1,4 +1,6 @@
 .fret {
+    --fret-color: #745d46;
+    --fret-border: rgb(70, 65, 64);
     display: flex;
     flex: 1;
     border-right:10px solid;
@@ -17,16 +19,7 @@
     border-image: linear-gradient(to left, #bbb, #fff, #bbb) 1 100%;
 }
 
-/* .fret:before {
-    content: 'C';
-    width: 33px;
-    height:33px;
-    border-radius: 50%;
-    line-height: 33px;
-    text-align: center;
-    background: teal;
-    z-index: 2;
-} */
+/*    */
 
 .fret.singledot:after {
     content: "";
@@ -34,7 +27,8 @@
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background: #806233;
+    background: var(--fret-color);
+    border: 1px solid var(--fret-border);
     top: 155px;
     transform: translate(0, -50%);
 }
@@ -45,7 +39,8 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #806233;
+    background: var(--fret-color);
+    border: 1px solid var(--fret-border);
     top: 55px;
     transform: translate(0, -50%);
     opacity: 100;
@@ -57,6 +52,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #806233;
+    background: var(--fret-color);
+    border: 1px solid var(--fret-border);
     top: 245px;
 }

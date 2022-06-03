@@ -1,59 +1,17 @@
-const VALID_BLACK_KEYS = ['s', 'd', 'g', 'h', 'j'];
-const VALID_WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
-const VALID_KEYS = [...VALID_BLACK_KEYS, ...VALID_WHITE_KEYS];
+//Notes available on a guitar - there's a distinction between each note of different octaves (E2 is a lower frequency of sound than E3, for example)
 const NOTES = [
-  'e3', 'f3', 'g#3', 'g3', 'g#4',
-  
-  'a4', 'a#4', 'b4','c4', 'c#4',
-  'd4', 'd#4', 'e4', 'f4', 'f#4', 
-  'g4', 'g#4',
+  'E2', 'F2', 'F#2', 'G2', 'G#2', 'A2', 'A#2', 'B2', 
+  'C3', 'C#3', 'D3', 'D#3', 'E3', 'F3', 'F#3', 'G3', 'G#3', 'A3', 'A#3', 'B3',
+  'C4', 'C#4', 'D4', 'D#4', 'E4', 'F4', 'F#4', 'G4', 'G#4', 'A4', 'A#4', 'B4', 
+  'C5', 'C#5', 'D5', 'D#5', 'E5',
+]
 
-  'a5', 'a#5', 'b5','c5', 'c#5',
-  'd5', 'd#5', 'e5', 'f5', 'f#5', 
-  'g5', 'g#5',
+//Basically the tuning of the guitar.  First index will be the highest (frequency) string, which in standard tuning is E4.  We have EADGBE tuning here
+const STRINGS = [24, 19, 15, 10, 5, 0];
 
-  'a6', 'a#6', 'b6','c6', 'c#6',
-  'd6', 'd#6', 'e6'
-  
-];
 
-const STRINGS = ['e', 'a', 'd', 'g', 'b', 'e'];
 
-const FRETS = ['nut', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-
-const NOTE_TO_KEY = {
-  c   : 'z',
-  df  : 's',
-  d   : 'x',
-  ef  : 'd',
-  e   : 'c',
-  f   : 'v',
-  gf  : 'g',
-  g   : 'b',
-  af  : 'h',
-  a   : 'n',
-  bf  : 'j',
-  b   : 'm',
-};
-const KEY_TO_NOTE = {
-  z: 'c',
-  s: 'df',
-  x: 'd',
-  d: 'ef',
-  c: 'e',
-  v: 'f',
-  g: 'gf',
-  b: 'g',
-  h: 'af',
-  n: 'a',
-  j: 'bf',
-  m: 'b',
-};
 export {
   NOTES,
-  VALID_KEYS,
-  NOTE_TO_KEY,
-  KEY_TO_NOTE,
   STRINGS,
-  FRETS,
 };
