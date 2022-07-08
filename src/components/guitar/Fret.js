@@ -34,7 +34,10 @@ const Fret = ( {fret, index, dotted, selectedNotes, onClick} ) => {
     }
 
     return (
-        <div className = {fretClassName} onClick = {() => onClick(fret)}>
+        <div className = {fretClassName}
+        //1st fret is twice as wide as 12th fret,
+        style = {{"--fret-ratio": (24 - index) / 24}}
+        onClick = {() => onClick(fret)}>
             <Note
                 type = {'fret'}
                 note = {fret}

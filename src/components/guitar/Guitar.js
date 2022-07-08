@@ -4,7 +4,7 @@ import React from 'react';
 import {
     STRINGS } from '../../global/constants.js'
 
-import String  from './String.js'
+import String from './String.js'
 
 import './Guitar.css';
 

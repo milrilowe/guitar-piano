@@ -54,7 +54,6 @@ const Note = ( {type, note, selectedNotes}) => {
             data-note = {note.slice(0, -1)} 
             style = {{"--opacity": opacity, "--color": color}}
         >
-            <div className = {"clickString"}/>
         </div>
 
     )
