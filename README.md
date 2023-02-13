@@ -21,4 +21,4 @@ The application should now be running on `http://localhost:3000`.
 
 To use the application, simply open your web browser and navigate to `http://localhost:3000`. From there, you can click on a key or a fret to see the corresponding note light up on the other instrument.
 
-![](public\guitar-piano.png)
+![](https://github.com/milrilowe/guitar-piano/blob/main/public/guitar-piano.png)
